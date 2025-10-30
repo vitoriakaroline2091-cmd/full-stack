@@ -1,0 +1,4 @@
+nomes.txt
+-nego
+-morgana
+-luiz
