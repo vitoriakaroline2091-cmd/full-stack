@@ -1,0 +1,33 @@
+body {
+background-color: rgb(5, 26, 46);
+}
+#container {
+    background:hsl(0, 3%, 64%);
+    max-width: 400px;
+    /* Centralizar */
+    margin: 0% auto;
+    border-radius: 15px;
+    /* Espaçamento dentro do elemento */
+    padding: 15px;
+    text-align: center;
+}
+
+#container  h1 {
+color: blueviolet;
+/* Espaçamento dentro do elemento */
+padding: 15px;
+/* Tamanho do texto */
+font-size: 30px;
+}
+#tarefa {
+    border: 2px solid #e4dbdbe6;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    color:rgb(46, 4, 4) ;
+
+}
+
+#tarefa::placeholder {
+    color: brown(199, 197,197);
+}
