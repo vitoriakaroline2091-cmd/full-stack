@@ -1,5 +1,7 @@
 body {
-background-color: rgb(5, 26, 46);
+background:url('../img/bg-site.jpg') no-repeat ;
+background-size:cover;
+
 }
 #container {
     background:hsl(0, 3%, 64%);
@@ -25,6 +27,16 @@ font-size: 30px;
     border-radius: 5px;
     outline: none;
     color:rgb(46, 4, 4) ;
+    .btnAdicionar {
+        background-repeat:rgb(16, 16, 75)
+        padding: 7px;
+        border: 0;
+        border-radius: 8px;
+    }
+
+
+
+
 
 }
 
