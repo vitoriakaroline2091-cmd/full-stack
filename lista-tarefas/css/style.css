@@ -28,7 +28,7 @@ font-size: 30px;
     outline: none;
     color:rgb(46, 4, 4) ;
     .btnAdicionar {
-        background-repeat:rgb(16, 16, 75)
+        background-repeat:rgb(16, 16, 75);
         padding: 7px;
         border: 0;
         border-radius: 8px;
@@ -38,7 +38,7 @@ font-size: 30px;
 
 
 
-}
+
 
 
 #tarefa::placeholder {
