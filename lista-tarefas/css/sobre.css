@@ -1,11 +1,21 @@
-body {
-background: rgb(182, 178, 178);
-
+*{
+   margin: 0; 
+   padding: 0;
 }
+
+body{
+    background: url('../img/fundobranco') no-repeat;
+    background-size: cover;
+}
+
 .container {
     background: #fff;
-    margin: 0px auto;
+    margin: auto;
     max-width: 1000px;
+    text-align: center;
+    border: 3px solid;
+    border-radius: 48px;
+    padding: 40px;
 }
 * {
     margin: 0;
@@ -34,10 +44,17 @@ background: rgb(182, 178, 178);
     .links a:hover{
         text-decoration: underline;
         color: rgb(31, 1, 31);
-        border: black;
+        border: black
     
         
 
         
 
+    }
+    .sobre-mim {
+        color: aliceblue;
+
+    }
+    #Meus interesses {
+        color: aliceblue
     }
