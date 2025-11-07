@@ -1,5 +1,5 @@
 //Função em JavaScript
 function adicionar() {
-    alert("Olá vitoria");
-    console.log("ola espiritualidade")
+    let tarefa = document.getElementById("tarefa");
+    console.log(tarefa.value);
 }
