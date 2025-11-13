@@ -3,7 +3,7 @@ if(nota >6){
     alert("Aprovado");
     
 
-}else if (nota <6); {
+}else (nota <6); {
     alert ("Reprovado");
     
 
