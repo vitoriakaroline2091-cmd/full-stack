@@ -17,4 +17,10 @@ Fim
 let anoInicio = Number(prompt("Digite o ano da primeira Copa do Mundo que voce ja viu"));
 let anoAtual = 2025;
 
- let
+while(anoInicio <=anoAtual) {
+    document.write("Copa do mundo: "+ anoInicio + "<br> ");
+    anoInicio = anoInicio +4;
+    
+}
+
+
