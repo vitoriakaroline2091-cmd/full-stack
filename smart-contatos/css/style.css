@@ -75,7 +75,7 @@ body {
     margin-bottom: 25px;
     font-size: 28px;
     font-weight: bold;
-    color: #d603c1;
+    color: #180748;
     letter-spacing: 1px;
 }
 
@@ -120,7 +120,7 @@ button {
     width: 100%;
     margin-top: 10px;
     padding: 12px;
-    background: #d603c1;
+    background: #081249;
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -131,7 +131,7 @@ button {
 }
 
 .group button:hover {
-    background: #364fc7;
+    background: #050b2a;
 }
 
 /* LISTA DE CONTATOS */
@@ -147,7 +147,7 @@ button {
     margin-bottom: 12px;
     border-radius: 12px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    border-left: 6px solid #4c6ef5;
+    border-left: 6px solid #212b52;
     display: flex;
     flex-direction: column;
     gap: 4px;
