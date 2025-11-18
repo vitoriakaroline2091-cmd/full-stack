@@ -1,4 +1,5 @@
 const form = document.querySelector("form");
+const lista = document.querySelector(".lista");
  const inputNome = document.getElementById("nome");
 const inputEmai = document.getElementById("email");
 const inputTel = document.getElementById("telefone");
@@ -7,29 +8,33 @@ const inputTel = document.getElementById("telefone");
     event.preventDefault();
 
     //Validação do formulário
-    /*
-    se o input for vazio, adicionando uma mensagem
-    */
-   if(inputNome.value=="") {
+    
+   if(inputNome.value== "" ||  inputEmai.value=="" || inputTel.value=="") {
     alert("Digite o nome");
     return false;
    }
-   if(inputEmai.value=="") 
-    alert("Digite o email");
+    // Criar LI
+    const li  = document.createElement("li");
 
+    li.innerHTML = `
+      <span class="contato-nome">${inputNome.value}</span>
+      <span class="contato-email">${inputEmai.value}</span>
+      <span class="contato-telefone">${inputTel.value}</span>
+     
+    `;
+  console.log(li)
 
+  // appendChild()
+  lista.appendChild(li)
 
-    console.log("Nome",inputNome.value);
-    console.log("Email",inputEmai.value);
-    console.log("Telefone",inputTel.value);
-    
+  //Limpar inputs
+  form.reset();
   })
 
+  
 
 
-
-
-
+    
 
 
 
