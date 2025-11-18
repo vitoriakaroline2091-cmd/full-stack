@@ -1,6 +1,6 @@
 const inputNome = document.getElementById("nome");
 const inputEmai = document.getElementById("email");
-
+const inputTel = document.getElementById("telefone");
 //inputEmail
 //inputTel
 
