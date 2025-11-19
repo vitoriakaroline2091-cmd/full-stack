@@ -19,13 +19,20 @@ const listaMsg = document.querySelector(".lista-msg");
    //se (listaMsg === true)
    if (listaMsg) {
     listaMsg.remove()
-
-
    }
 
+   // Criando botão Excluir
+   const btnExcluir = document.createElement("button");
+   btnExcluir.textContent = "Excluir";
+   btnExcluir.className = "btn-delete";
 
     // Criar LI
     const li  = document.createElement("li");
+
+    //Criando uma função para excluir
+    btnExcluir.addEventListener("click",function() {
+      alert("teste")
+    })
 
     li.innerHTML = `
       <span class="contato-nome">${inputNome.value}</span>
@@ -37,6 +44,8 @@ const listaMsg = document.querySelector(".lista-msg");
 
   // appendChild()
   lista.appendChild(li)
+  li.appendChild(btnExcluir)
+  
 
   //Limpar inputs
   form.reset();
