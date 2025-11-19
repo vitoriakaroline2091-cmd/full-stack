@@ -5,6 +5,7 @@ const inputEmai = document.getElementById("email");
 const inputTel = document.getElementById("telefone");
 const listaMsg = document.querySelector(".lista-msg");
 
+
  form.addEventListener("submit", function(event) {
     event.preventDefault();
  
@@ -31,8 +32,14 @@ const listaMsg = document.querySelector(".lista-msg");
 
     //Criando uma função para excluir
     btnExcluir.addEventListener("click",function() {
-      alert("teste")
-    })
+      const confirmar = confirm("Tem certeza que deseja excluir o contato?");
+
+      if (confirmar) {
+      li.remove();
+      }
+    
+      
+    });
 
     li.innerHTML = `
       <span class="contato-nome">${inputNome.value}</span>
