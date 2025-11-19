@@ -3,16 +3,27 @@ const lista = document.querySelector(".lista");
  const inputNome = document.getElementById("nome");
 const inputEmai = document.getElementById("email");
 const inputTel = document.getElementById("telefone");
+const listaMsg = document.querySelector(".lista-msg");
 
- form = document.addEventListener("submit", function (event) {
+ form.addEventListener("submit", function(event) {
     event.preventDefault();
-
+ 
     //Validação do formulário
     
-   if(inputNome.value== "" ||  inputEmai.value=="" || inputTel.value=="") {
-    alert("Digite o nome");
+   if (inputNome.value == "" ||  inputEmai.value == "" ||  inputTel.value == "") {
+    alert("Digite seus dados");
     return false;
    }
+
+   // Condição, para retirar a li > .lista-msg
+   //se (listaMsg === true)
+   if (listaMsg) {
+    listaMsg.remove()
+
+
+   }
+
+
     // Criar LI
     const li  = document.createElement("li");
 
