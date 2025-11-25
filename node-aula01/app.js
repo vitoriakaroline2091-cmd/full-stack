@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
+// Middleware para servir arquivo estáticos
+app.use(express.static('public'));
+
 //Variável com os dados produtos
 const produtos = [
     { id: 1, nome: 'Produto A', preco: 100 },
@@ -36,7 +39,7 @@ app.get('/home', (req, res) => {
 // Rota times
 app.get('/times', (req, res) => {
     //console.log(times);
-    res.send(times);
+    res.send(times)
 })
 
 // Executando o servidor
