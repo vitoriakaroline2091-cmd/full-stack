@@ -11,6 +11,7 @@ const nomes = [
     { id: 3, nome: "Pedro", idade: "56" },
     { id: 4, nome: "Samuel", idade: "45" },
     { id: 5, nome: "Doris", idade: "33" },
+    
 ];
 
 //Criando funções auxiliares
@@ -48,6 +49,13 @@ app.get("/listaNomes/:id",(req, res)=> {
     res.json(buscarNomesPorid(index))
     
 });
+
+//Criando Post para cadastrar
+app.post("/ListaNomes", (req, res)=> {
+    nomes.push(req.body);
+    res.status(201).send('Nomes cadastrado com sucesso');
+});
+
 
 //Criando Rota Excluir
 app.delete("/ListaNomes/:id", (req, res)=> {
