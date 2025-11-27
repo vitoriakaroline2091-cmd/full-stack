@@ -53,7 +53,7 @@ app.get("/listaNomes/:id",(req, res)=> {
 //Criando Post para cadastrar
 app.post("/ListaNomes", (req, res)=> {
     nomes.push(req.body);
-    res.status(201).send('Nomes cadastrado com sucesso');
+    res.status(201).send('Nomes cadastrado com sucesso!');
 });
 
 
