@@ -53,7 +53,28 @@ app.get('/listaNomes', (req, res) => {
     res.send(nomes);
 });
 
-// Buscando nomes (ListaNomes)
+
+//Criando funções auxiliares
+//Retornar o objeto por id
+function buscarIdTimes(id) {
+    return times.filter((times)=> times.id== id)
+}
+
+//Pegar a posição ou index do elemento do Array por id
+function buscarIdTimes(id) {
+    return times.findIndex((times)=> times.id == id);
+
+}
+
+// Buscando times (ListaTimes)
+
+//Buscando por ID
+app.get("/ListaTimes/:id",(req, res)=> {
+    let index = req.params.id;
+
+    res.json(buscarIdTimes(index))
+
+});
 
 //Adicionando times(ListaTimes)
 app.get('/times', (req, res) => {
@@ -73,6 +94,12 @@ app.delete("/ListaTimes/:id", (req, res)=> {
     res.send(`Times com id ${req.params.id} excluida com sucesso!`);
 });
 
+
+
+
+
+
+
 //Buscando pot ID
 app.get("/listaNomes/:id",(req, res)=> {
     let index = req.params.id;
@@ -90,6 +117,14 @@ app.post("/ListaNomes", (req, res)=> {
 
 //Criando Rota Excluir
 app.delete("/ListaNomes/:id", (req, res)=> {
+    let id = req.params.id;
+    let index = buscarIdNomes(id);
+    //se não encontrar,retornar erro
+    if(index===  -1){
+        return res.status(404).send(`Nenhum nome com id ${id} foi encontrado`)
+    }
+
+
     let index = buscarIdNomes (req.params.id);
     nomes.splice(index, 1);
     res.send(`Nomes com id ${req.params.id} excluida com sucesso!`);
