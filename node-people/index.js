@@ -31,7 +31,8 @@ const times = [
 //Retornar o objeto por id
 function buscarNomesPorid(id) {
     return nomes.filter((nome) => nome.id == id)
-}
+};
+
 
 //Pegar a posição ou index do elemento do Array por id
 function buscarIdNomes(id) {
@@ -57,7 +58,7 @@ app.get('/listaNomes', (req, res) => {
 //Criando funções auxiliares
 //Retornar o objeto por id
 function buscarIdTimes(id) {
-    return times.filter((times)=> times.id== id)
+    return times.filter((time)=> times.id== id)
 }
 
 //Pegar a posição ou index do elemento do Array por id
@@ -76,12 +77,12 @@ app.get("/ListaTimes/:id",(req, res)=> {
 
 });
 //Rota alterar times ou outra coisa
-app.put("/ListaTimes/:id", (res, res)=> {
-    let index = buscarIdTimess(req.params.id);
-    times[index].nomeq.body.nome;
-    times[index].idade = req.body.idade;
+app.put("/ListaTimes/:id", (req, res)=> {
+    let index = buscarIdTimes(req.params.id);
+    times[index].nome=req.body.nome;
+    times[index].estado= req.body.estado;
     
-    
+    res.json(times)
 })
 
 //Adicionando times(ListaTimes)
@@ -98,7 +99,7 @@ app.post("/ListaTimes", (req, res)=> {
 //Criando Rota para deletar times
 app.delete("/ListaTimes/:id", (req, res)=> {
     let index = buscarIdTimes (req.params.id);
-    times.splice(index,1);
+    times.splice(index, 1);
     res.send(`Times com id ${req.params.id} excluida com sucesso!`);
 });
 
