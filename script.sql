@@ -19,6 +19,8 @@ insert into produtos (nome, email, telefone, cpf, endereco) values
 
 
 
+
+
 -- Seleciona o registro onde o id = 1
 select * from produtos  where id = 2;
 
