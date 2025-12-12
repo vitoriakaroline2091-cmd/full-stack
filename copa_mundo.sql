@@ -20,4 +20,12 @@ insert into selecoes (selecao, grupo) values
   ('Nigeria', 'D'),
   ('Nova Zelandia', 'E'),
   ('Japao', 'F');
+  
+  insert into selecoes  (selecao, grupo) values
+  ('Chile', 'G'),
+  ('Bolivia', 'H');
+  
+  drop table selecoes;
+  
+  
  
