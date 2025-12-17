@@ -1,9 +1,8 @@
 import express from "express";
 import conexao from "../infra/conexao.js"
 const app = express();
-// teste
+// indicar para o express body com json
     app.use(express.json());
-
 
 app.get("/", (req, res) => {
     res.send("Olá Copa do Mundo!");
@@ -28,6 +27,16 @@ app.get('/selecoes/:id', (req, res)=> {
     });
 
 });
+//Criando post para cadastrar
+app.post('/selecoes', (req, res)=> {
+    const selecao = req.body;
+    const sql = "INSERT INTO selecoes SET?";
+
+    conexao.query (sql, selecao, ()=> {
+        res.json({mensagem: "cadastrado com sucesso!"});
+    
+    });
+});
 
 // Deletando registro
 app.delete('/selecoes/:id', (req, res)=> {
@@ -39,6 +48,20 @@ app.delete('/selecoes/:id', (req, res)=> {
     });
 })
 
+// Alterando times das selecoes 
+ app.put('/selecoes/:id', (req, res)=> {
+   const id = req.params.id;
+   const selecao= req.body;
+   const sql= "update selecoes set? where id=?";
+   
+   conexao.query(sql,[selecao,id], ()=> {
+    res.json({mensagem: "alterando com sucesso"});
+   });
+
+
+
+});
+   
 
 
 export default app;
